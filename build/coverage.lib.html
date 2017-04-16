@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-grunt-contrib-uglify/grunt-contrib-uglify/tasks/uglify.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-grunt-contrib-uglify/node_modules/grunt-contrib-uglify/tasks/uglify.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-grunt-contrib-uglify">npmtest-grunt-contrib-uglify (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-grunt-contrib-uglify/grunt-contrib-uglify/tasks/uglify.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-grunt-contrib-uglify/node_modules/grunt-contrib-uglify/tasks/uglify.js</span></h1>
     <h2>
         
         Statements: <span class="metric">7.53% <small>(7 / 93)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-grunt-contrib-uglify/grunt-contrib-uglify/tasks/</a> » uglify.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-grunt-contrib-uglify/node_modules/grunt-contrib-uglify/tasks/</a> &#187; uglify.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -628,38 +630,38 @@ var maxmin = require('maxmin');
 var err;
 &nbsp;
 // Return the relative path from file1 =&gt; file2
-<span class="fstat-no" title="function not covered">function relativePath(file1, file2) {</span>
-<span class="cstat-no" title="statement not covered">  var file1Dirname = path.dirname(file1);</span>
-<span class="cstat-no" title="statement not covered">  var file2Dirname = path.dirname(file2);</span>
+<span class="fstat-no" title="function not covered" >function relativePath(file1, file2) {</span>
+<span class="cstat-no" title="statement not covered" >  var file1Dirname = path.dirname(file1);</span>
+<span class="cstat-no" title="statement not covered" >  var file2Dirname = path.dirname(file2);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (file1Dirname !== file2Dirname) {</span>
-<span class="cstat-no" title="statement not covered">    return path.relative(file1Dirname, file2Dirname) + path.sep;</span>
+<span class="cstat-no" title="statement not covered" >  if (file1Dirname !== file2Dirname) {</span>
+<span class="cstat-no" title="statement not covered" >    return path.relative(file1Dirname, file2Dirname) + path.sep;</span>
   }
-<span class="cstat-no" title="statement not covered">  return '';</span>
+<span class="cstat-no" title="statement not covered" >  return '';</span>
 }
 &nbsp;
 // Converts \r\n to \n
-<span class="fstat-no" title="function not covered">function normalizeLf(string) {</span>
-<span class="cstat-no" title="statement not covered">  return string.replace(/\r\n/g, '\n');</span>
+<span class="fstat-no" title="function not covered" >function normalizeLf(string) {</span>
+<span class="cstat-no" title="statement not covered" >  return string.replace(/\r\n/g, '\n');</span>
 }
 &nbsp;
-module.exports = <span class="fstat-no" title="function not covered">function(grunt) {</span>
+module.exports = <span class="fstat-no" title="function not covered" >function(grunt) {</span>
   // Internal lib.
-<span class="cstat-no" title="statement not covered">  var uglify = require('./lib/uglify').init(grunt);</span>
+<span class="cstat-no" title="statement not covered" >  var uglify = require('./lib/uglify').init(grunt);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var getAvailableFiles = <span class="fstat-no" title="function not covered">function (filesArray) {</span></span>
-<span class="cstat-no" title="statement not covered">    return filesArray.filter(<span class="fstat-no" title="function not covered">function (filepath) {</span></span>
-<span class="cstat-no" title="statement not covered">      if (!grunt.file.exists(filepath)) {</span>
-<span class="cstat-no" title="statement not covered">        grunt.log.warn('Source file ' + chalk.cyan(filepath) + ' not found');</span>
-<span class="cstat-no" title="statement not covered">        return false;</span>
+<span class="cstat-no" title="statement not covered" >  var getAvailableFiles = <span class="fstat-no" title="function not covered" >function (filesArray) {</span></span>
+<span class="cstat-no" title="statement not covered" >    return filesArray.filter(<span class="fstat-no" title="function not covered" >function (filepath) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (!grunt.file.exists(filepath)) {</span>
+<span class="cstat-no" title="statement not covered" >        grunt.log.warn('Source file ' + chalk.cyan(filepath) + ' not found');</span>
+<span class="cstat-no" title="statement not covered" >        return false;</span>
       }
-<span class="cstat-no" title="statement not covered">      return true;</span>
+<span class="cstat-no" title="statement not covered" >      return true;</span>
     });
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered">  grunt.registerMultiTask('uglify', 'Minify files with UglifyJS.', <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered" >  grunt.registerMultiTask('uglify', 'Minify files with UglifyJS.', <span class="fstat-no" title="function not covered" >function() {</span></span>
     // Merge task-specific and/or target-specific options with these defaults.
-<span class="cstat-no" title="statement not covered">    var options = this.options({</span>
+<span class="cstat-no" title="statement not covered" >    var options = this.options({</span>
       banner: '',
       footer: '',
       compress: {
@@ -675,149 +677,148 @@ module.exports = <span class="fstat-no" title="function not covered">function(gr
       quoteStyle: 0
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var footer = normalizeLf(options.footer);</span>
-<span class="cstat-no" title="statement not covered">    var mapNameGenerator, mapInNameGenerator;</span>
-<span class="cstat-no" title="statement not covered">    var created = {</span>
+<span class="cstat-no" title="statement not covered" >    var footer = normalizeLf(options.footer);</span>
+<span class="cstat-no" title="statement not covered" >    var mapNameGenerator, mapInNameGenerator;</span>
+<span class="cstat-no" title="statement not covered" >    var created = {</span>
       maps: 0,
       files: 0
     };
-<span class="cstat-no" title="statement not covered">    var size = {</span>
+<span class="cstat-no" title="statement not covered" >    var size = {</span>
       before: 0,
       after: 0
     };
 &nbsp;
     // Iterate over all src-dest file pairs.
-<span class="cstat-no" title="statement not covered">    this.files.forEach(<span class="fstat-no" title="function not covered">function (f) {</span></span>
-<span class="cstat-no" title="statement not covered">      var availableFiles = getAvailableFiles(f.src);</span>
+<span class="cstat-no" title="statement not covered" >    this.files.forEach(<span class="fstat-no" title="function not covered" >function (f) {</span></span>
+<span class="cstat-no" title="statement not covered" >      var availableFiles = getAvailableFiles(f.src);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      if (availableFiles.length === 0) {</span>
-<span class="cstat-no" title="statement not covered">        grunt.log.warn('Destination ' + chalk.cyan(f.dest) + ' not written because src files were empty.');</span>
-<span class="cstat-no" title="statement not covered">        return;</span>
+<span class="cstat-no" title="statement not covered" >      if (availableFiles.length === 0) {</span>
+<span class="cstat-no" title="statement not covered" >        grunt.log.warn('Destination ' + chalk.cyan(f.dest) + ' not written because src files were empty.');</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
       }
 &nbsp;
       // Warn on incompatible options
-<span class="cstat-no" title="statement not covered">      if (options.expression &amp;&amp; (options.compress || options.mangle)) {</span>
-<span class="cstat-no" title="statement not covered">        grunt.log.warn('Option ' + chalk.cyan('expression') + ' not compatible with ' + chalk.cyan('compress and mangle'));</span>
-<span class="cstat-no" title="statement not covered">        options.compress = false;</span>
-<span class="cstat-no" title="statement not covered">        options.mangle = false;</span>
+<span class="cstat-no" title="statement not covered" >      if (options.expression &amp;&amp; (options.compress || options.mangle)) {</span>
+<span class="cstat-no" title="statement not covered" >        grunt.log.warn('Option ' + chalk.cyan('expression') + ' not compatible with ' + chalk.cyan('compress and mangle'));</span>
+<span class="cstat-no" title="statement not covered" >        options.compress = false;</span>
+<span class="cstat-no" title="statement not covered" >        options.mangle = false;</span>
       }
 &nbsp;
       // function to get the name of the sourceMap
-<span class="cstat-no" title="statement not covered">      if (typeof options.sourceMapName === 'function') {</span>
-<span class="cstat-no" title="statement not covered">        mapNameGenerator = options.sourceMapName;</span>
+<span class="cstat-no" title="statement not covered" >      if (typeof options.sourceMapName === 'function') {</span>
+<span class="cstat-no" title="statement not covered" >        mapNameGenerator = options.sourceMapName;</span>
       }
 &nbsp;
       // function to get the name of the sourceMapIn file
-<span class="cstat-no" title="statement not covered">      if (typeof options.sourceMapIn === 'function') {</span>
-<span class="cstat-no" title="statement not covered">        if (availableFiles.length !== 1) {</span>
-<span class="cstat-no" title="statement not covered">          grunt.fail.warn('Cannot generate `sourceMapIn` for multiple source files.');</span>
+<span class="cstat-no" title="statement not covered" >      if (typeof options.sourceMapIn === 'function') {</span>
+<span class="cstat-no" title="statement not covered" >        if (availableFiles.length !== 1) {</span>
+<span class="cstat-no" title="statement not covered" >          grunt.fail.warn('Cannot generate `sourceMapIn` for multiple source files.');</span>
         }
-<span class="cstat-no" title="statement not covered">        mapInNameGenerator = options.sourceMapIn;</span>
+<span class="cstat-no" title="statement not covered" >        mapInNameGenerator = options.sourceMapIn;</span>
       }
 &nbsp;
       // dynamically create destination sourcemap name
-<span class="cstat-no" title="statement not covered">      if (mapNameGenerator) {</span>
-<span class="cstat-no" title="statement not covered">        try {</span>
-<span class="cstat-no" title="statement not covered">          options.generatedSourceMapName = mapNameGenerator(f.dest);</span>
+<span class="cstat-no" title="statement not covered" >      if (mapNameGenerator) {</span>
+<span class="cstat-no" title="statement not covered" >        try {</span>
+<span class="cstat-no" title="statement not covered" >          options.generatedSourceMapName = mapNameGenerator(f.dest);</span>
         } catch (e) {
-<span class="cstat-no" title="statement not covered">          err = new Error('SourceMap failed.');</span>
-<span class="cstat-no" title="statement not covered">          err.origError = e;</span>
-<span class="cstat-no" title="statement not covered">          grunt.fail.warn(err);</span>
+<span class="cstat-no" title="statement not covered" >          err = new Error('SourceMap failed.');</span>
+<span class="cstat-no" title="statement not covered" >          err.origError = e;</span>
+<span class="cstat-no" title="statement not covered" >          grunt.fail.warn(err);</span>
         }
       // If no name is passed append .map to the filename
-      } else <span class="cstat-no" title="statement not covered">if (!options.sourceMapName) {</span>
-<span class="cstat-no" title="statement not covered">        options.generatedSourceMapName = f.dest + '.map';</span>
+      } else <span class="cstat-no" title="statement not covered" >if (!options.sourceMapName) {</span>
+<span class="cstat-no" title="statement not covered" >        options.generatedSourceMapName = f.dest + '.map';</span>
       } else {
-<span class="cstat-no" title="statement not covered">        options.generatedSourceMapName = options.sourceMapName;</span>
+<span class="cstat-no" title="statement not covered" >        options.generatedSourceMapName = options.sourceMapName;</span>
       }
 &nbsp;
       // Dynamically create incoming sourcemap names
-<span class="cstat-no" title="statement not covered">      if (mapInNameGenerator) {</span>
-<span class="cstat-no" title="statement not covered">        try {</span>
-<span class="cstat-no" title="statement not covered">          options.sourceMapIn = mapInNameGenerator(availableFiles[0]);</span>
+<span class="cstat-no" title="statement not covered" >      if (mapInNameGenerator) {</span>
+<span class="cstat-no" title="statement not covered" >        try {</span>
+<span class="cstat-no" title="statement not covered" >          options.sourceMapIn = mapInNameGenerator(availableFiles[0]);</span>
         } catch (e) {
-<span class="cstat-no" title="statement not covered">          err = new Error('SourceMapInName failed.');</span>
-<span class="cstat-no" title="statement not covered">          err.origError = e;</span>
-<span class="cstat-no" title="statement not covered">          grunt.fail.warn(err);</span>
+<span class="cstat-no" title="statement not covered" >          err = new Error('SourceMapInName failed.');</span>
+<span class="cstat-no" title="statement not covered" >          err.origError = e;</span>
+<span class="cstat-no" title="statement not covered" >          grunt.fail.warn(err);</span>
         }
       }
 &nbsp;
       // Calculate the path from the dest file to the sourcemap for the
       // sourceMappingURL reference
       // If sourceMapUrl is defined, use this instead
-<span class="cstat-no" title="statement not covered">      if (options.sourceMap) {</span>
-<span class="cstat-no" title="statement not covered">        var destToSourceMapPath, sourceMapBasename;</span>
-<span class="cstat-no" title="statement not covered">        if (!options.sourceMapUrl) {</span>
-<span class="cstat-no" title="statement not covered">          destToSourceMapPath = relativePath(f.dest, options.generatedSourceMapName);</span>
-<span class="cstat-no" title="statement not covered">          sourceMapBasename = path.basename(options.generatedSourceMapName);</span>
-<span class="cstat-no" title="statement not covered">          options.destToSourceMap = destToSourceMapPath + sourceMapBasename;</span>
+<span class="cstat-no" title="statement not covered" >      if (options.sourceMap) {</span>
+<span class="cstat-no" title="statement not covered" >        var destToSourceMapPath, sourceMapBasename;</span>
+<span class="cstat-no" title="statement not covered" >        if (!options.sourceMapUrl) {</span>
+<span class="cstat-no" title="statement not covered" >          destToSourceMapPath = relativePath(f.dest, options.generatedSourceMapName);</span>
+<span class="cstat-no" title="statement not covered" >          sourceMapBasename = path.basename(options.generatedSourceMapName);</span>
+<span class="cstat-no" title="statement not covered" >          options.destToSourceMap = destToSourceMapPath + sourceMapBasename;</span>
         } else {
-<span class="cstat-no" title="statement not covered">          options.destToSourceMap = options.sourceMapUrl;</span>
+<span class="cstat-no" title="statement not covered" >          options.destToSourceMap = options.sourceMapUrl;</span>
         }
       }
 &nbsp;
       // Minify files, warn and fail on error.
-<span class="cstat-no" title="statement not covered">      var result;</span>
-<span class="cstat-no" title="statement not covered">      try {</span>
-<span class="cstat-no" title="statement not covered">        result = uglify.minify(availableFiles, f.dest, options);</span>
+<span class="cstat-no" title="statement not covered" >      var result;</span>
+<span class="cstat-no" title="statement not covered" >      try {</span>
+<span class="cstat-no" title="statement not covered" >        result = uglify.minify(availableFiles, f.dest, options);</span>
       } catch (e) {
-<span class="cstat-no" title="statement not covered">        console.log(e);</span>
-<span class="cstat-no" title="statement not covered">        err = new Error('Uglification failed.');</span>
-<span class="cstat-no" title="statement not covered">        if (e.message) {</span>
-<span class="cstat-no" title="statement not covered">          err.message += '\n' + e.message + '. \n';</span>
-<span class="cstat-no" title="statement not covered">          if (e.line) {</span>
-<span class="cstat-no" title="statement not covered">            err.message += 'Line ' + e.line + ' in ' + availableFiles + '\n';</span>
+<span class="cstat-no" title="statement not covered" >        console.log(e);</span>
+<span class="cstat-no" title="statement not covered" >        err = new Error('Uglification failed.');</span>
+<span class="cstat-no" title="statement not covered" >        if (e.message) {</span>
+<span class="cstat-no" title="statement not covered" >          err.message += '\n' + e.message + '. \n';</span>
+<span class="cstat-no" title="statement not covered" >          if (e.line) {</span>
+<span class="cstat-no" title="statement not covered" >            err.message += 'Line ' + e.line + ' in ' + availableFiles + '\n';</span>
           }
         }
-<span class="cstat-no" title="statement not covered">        err.origError = e;</span>
-<span class="cstat-no" title="statement not covered">        grunt.log.warn('Uglifying source ' + chalk.cyan(availableFiles) + ' failed.');</span>
-<span class="cstat-no" title="statement not covered">        grunt.fail.warn(err);</span>
+<span class="cstat-no" title="statement not covered" >        err.origError = e;</span>
+<span class="cstat-no" title="statement not covered" >        grunt.log.warn('Uglifying source ' + chalk.cyan(availableFiles) + ' failed.');</span>
+<span class="cstat-no" title="statement not covered" >        grunt.fail.warn(err);</span>
       }
 &nbsp;
       // Concat minified source + footer
-<span class="cstat-no" title="statement not covered">      var output = result.min + footer;</span>
+<span class="cstat-no" title="statement not covered" >      var output = result.min + footer;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      var unCompiledJSString = availableFiles.map(<span class="fstat-no" title="function not covered">function (file) {</span></span>
-<span class="cstat-no" title="statement not covered">        return grunt.file.read(file);</span>
+<span class="cstat-no" title="statement not covered" >      var unCompiledJSString = availableFiles.map(<span class="fstat-no" title="function not covered" >function (file) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return grunt.file.read(file);</span>
       }).join('');
 &nbsp;
       // Write the destination file.
-<span class="cstat-no" title="statement not covered">      grunt.file.write(f.dest, output);</span>
+<span class="cstat-no" title="statement not covered" >      grunt.file.write(f.dest, output);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      size.before += unCompiledJSString.length;</span>
+<span class="cstat-no" title="statement not covered" >      size.before += unCompiledJSString.length;</span>
 &nbsp;
       // Write source map
-<span class="cstat-no" title="statement not covered">      if (options.sourceMap) {</span>
-<span class="cstat-no" title="statement not covered">        grunt.file.write(options.generatedSourceMapName, result.sourceMap);</span>
-<span class="cstat-no" title="statement not covered">        grunt.verbose.writeln('File ' + chalk.cyan(options.generatedSourceMapName) + ' created (source map).');</span>
-<span class="cstat-no" title="statement not covered">        created.maps++;</span>
+<span class="cstat-no" title="statement not covered" >      if (options.sourceMap) {</span>
+<span class="cstat-no" title="statement not covered" >        grunt.file.write(options.generatedSourceMapName, result.sourceMap);</span>
+<span class="cstat-no" title="statement not covered" >        grunt.verbose.writeln('File ' + chalk.cyan(options.generatedSourceMapName) + ' created (source map).');</span>
+<span class="cstat-no" title="statement not covered" >        created.maps++;</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      var outputSize = maxmin(result.max, output, options.report === 'gzip');</span>
-<span class="cstat-no" title="statement not covered">      grunt.verbose.writeln('File ' + chalk.cyan(f.dest) + ' created: ' + chalk.dim(outputSize));</span>
+<span class="cstat-no" title="statement not covered" >      var outputSize = maxmin(result.max, output, options.report === 'gzip');</span>
+<span class="cstat-no" title="statement not covered" >      grunt.verbose.writeln('File ' + chalk.cyan(f.dest) + ' created: ' + chalk.dim(outputSize));</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      created.files++;</span>
-<span class="cstat-no" title="statement not covered">      size.after += output.length;</span>
+<span class="cstat-no" title="statement not covered" >      created.files++;</span>
+<span class="cstat-no" title="statement not covered" >      size.after += output.length;</span>
     });
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (created.maps &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered">      grunt.log.ok(created.maps + ' source' + grunt.util.pluralize(created.maps, 'map/maps') + ' created.');</span>
+<span class="cstat-no" title="statement not covered" >    if (created.maps &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >      grunt.log.ok(created.maps + ' source' + grunt.util.pluralize(created.maps, 'map/maps') + ' created.');</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (created.files &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered">      grunt.log.ok(created.files + ' ' + grunt.util.pluralize(this.files.length, 'file/files') + ' created ' + chalk.dim(maxmin(size.before, size.after)));</span>
+<span class="cstat-no" title="statement not covered" >    if (created.files &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >      grunt.log.ok(created.files + ' ' + grunt.util.pluralize(this.files.length, 'file/files') + ' created ' + chalk.dim(maxmin(size.before, size.after)));</span>
     } else {
-<span class="cstat-no" title="statement not covered">      grunt.log.warn('No files created.');</span>
+<span class="cstat-no" title="statement not covered" >      grunt.log.warn('No files created.');</span>
     }
   });
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 06:29:11 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sun Apr 16 2017 09:01:39 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
